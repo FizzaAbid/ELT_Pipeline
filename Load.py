@@ -4,16 +4,7 @@ import sqlite3
 import ast
 from pandas.io.json import json_normalize
 import sqlalchemy
-
-def Load__Nobel_Prize(lauretes_nobel_prize,engine):
-    lauretes_nobel_prize = lauretes_nobel_prize.applymap(str)
-    #Inserting Records in Staging Table
-    lauretes_nobel_prize.to_sql('laureates_staging', engine, if_exists='replace')
-
-def Load_in_Production(df_laureates,engine):    
-    engine.execute("DROP TABLE if exists laureates ")
-    df_laureates.to_sql('laureates',engine)
-    
+import pprint
 
 def Load_nobelPrizes_data(nobelprize_json,conn):
     conn.execute('''Create table if not exists nobelPrizes_staging (
@@ -34,4 +25,43 @@ def Load_nobelPrizes_data(nobelprize_json,conn):
         conn.execute(sql, (child['awardYear'], json.dumps(child['category']),
                            json.dumps(child['categoryFullName']),child['prizeAmount'], child['prizeAmountAdjusted'],
                            json.dumps(child['laureates']), json.dumps(child['links'])))
+
+
+#Load laureates data
+def Load_laureates_data(laureates_json,conn):
+    conn.execute(''' DROP TABLE laureates_dump_staging''')
+    conn.execute('''Create table if not exists laureates_dump_staging (
+        id varchar(4) CONSTRAINT laureates_details_pk PRIMARY KEY,
+        knownName json, 
+        familyName varchar(1000),
+        givenName varchar(1000),
+        fileName varchar(1000),
+        gender varchar(100),
+        nobelPrizes json,
+        fullName json,
+        sameAs json,
+        links json,
+        wikidata json,
+        birth json
+        ) ''')
+    
+
+    for child in laureates_json['laureates']:
+        sql= ''' Insert into laureates_dump_staging (id,knownName, familyName, givenName,
+                 fileName, gender,nobelPrizes, fullName,
+                 sameAs, links, wikidata, birth)
+                 VALUES  (%s,%s,%s,%s,%s,%s,%s, %s,%s,%s,%s, %s)'''
+        
+        conn.execute(sql, (child['id'],
+                           (json.dumps(child['knownName'])),json.dumps(child['familyName']),
+                           json.dumps(child['givenName']),
+                           child['fileName'],
+                           child['gender'],
+                           json.dumps(child['nobelPrizes']), json.dumps(child['fullName']),
+                           json.dumps(child['sameAs']),
+                           json.dumps(child['links']),
+                           json.dumps(child['wikidata']),
+                           json.dumps(child['birth']
+                          )
+                            ))
         

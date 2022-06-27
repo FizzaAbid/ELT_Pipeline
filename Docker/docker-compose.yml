@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB: secret_escapes
+      POSTGRES_DB: postgres
 
   adminer:
     image: adminer
