@@ -20,6 +20,8 @@ This will start the image, check in docker whether the image is running or not.
 9. Run file using command "python ELT.py"
 ### Database Login Page ###
 <img width="989" alt="image" src="https://user-images.githubusercontent.com/31180223/175987008-88ffdb3b-cc04-4c03-9432-25df8e2b6c62.png">
+
+
 ### Staging Tables ###
 <img width="963" alt="image" src="https://user-images.githubusercontent.com/31180223/175987093-e16b073e-0133-4bb5-86aa-459af7d24095.png">
 
