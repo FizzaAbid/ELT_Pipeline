@@ -54,5 +54,6 @@ multi-valued attributes to normalize the table. Data types have been changed. So
 
 ##### Future Recommendation ###
 - Normalization can be done to reduce redundancy in depth.
-- Same code can be executed on pyspark
+- Same code can be executed on pyspark (Initially started code with pyspark in the beginning, just added a dummy code for it) 
 - Separate tables for categories, locations, links, etc. can be created with one mutual column id
+
