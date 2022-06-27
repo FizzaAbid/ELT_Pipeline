@@ -1,4 +1,4 @@
-### Steps for installing Dependenices ########
+## Steps for installing Dependenices ##
 1. Switch to virtual environment using source env/bin/activate or for initiating it for the first time enter "python -m venv env"
 2. Download the following libraries in virtual environment if needed; however, the attached env folder has setup with all dependencies so just enter "python -m venv env"
 3. Following commands have been used for downloading all the dependencies:
@@ -26,7 +26,7 @@ This will start the image, check in docker whether the image is running or not.
 
 
 
-### Code Structure ##
+### Code Structure ###
 1. Extract.py has two functions, which extract data from the API using request library.
 2. Load.py has two functions for loading data into Postgres sql
 3. Transform.py perform transformations on data, such as converting json data into columns. 
@@ -48,7 +48,7 @@ multi-valued attributes to normalize the table. Data types have been changed. So
 5. Metadata has been discarded. 
 6. Queries have been executed for selecting specific columns
 
-##### Future Recommendation###
+##### Future Recommendation ###
 - Normalization can be done to reduce redundancy in depth.
 - Same code can be executed on pyspark
 - Separate tables for categories, locations, links, etc. can be created with one mutual column id
