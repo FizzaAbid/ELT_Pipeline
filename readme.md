@@ -8,6 +8,7 @@
 - pip install psycopg2
 - pip install sqlalchemy
 - pip install postgres
+- pip install pyspark (for running pyspark code) this library is not included in env. 
 4. Download Docker Desktop and login into it using any personal id
 5. Open the code in editor like VS code and run the following commands:
 - cd Docker
