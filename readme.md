@@ -1,6 +1,6 @@
 ### Steps for installing Dependenices ########
 1. Switch to virtual environment using source env/bin/activate or for initiating it for the first time enter "python -m venv env"
-2. Download the following libraries in virtual environment if needed; however, the attached env folder has setup with all dependencies.
+2. Download the following libraries in virtual environment if needed; however, the attached env folder has setup with all dependencies so just enter "python -m venv env"
 3. Following commands have been used for downloading all the dependencies:
 - pip install requests
 - pip install pandas
@@ -17,6 +17,13 @@ This will start the image, check in docker whether the image is running or not.
 7. In system, choose "Postgres", set server= database, username and password is "docker". Enter database name as "postgres"
 8. Press login
 9. Run file using command "python ELT.py"
+
+<img width="989" alt="image" src="https://user-images.githubusercontent.com/31180223/175987008-88ffdb3b-cc04-4c03-9432-25df8e2b6c62.png">
+<img width="963" alt="image" src="https://user-images.githubusercontent.com/31180223/175987093-e16b073e-0133-4bb5-86aa-459af7d24095.png">
+<img width="1189" alt="image" src="https://user-images.githubusercontent.com/31180223/175987225-13d57d06-26f9-4042-905e-f357703f3dc8.png">
+<img width="1266" alt="image" src="https://user-images.githubusercontent.com/31180223/175987439-a68ddb96-5c7a-44ae-b5dd-a1ea7e3598ac.png">
+<img width="632" alt="image" src="https://user-images.githubusercontent.com/31180223/175987534-810e9d00-a905-49d4-94e7-aff2bd6a2b39.png">
+
 
 
 ### Code Structure ##
