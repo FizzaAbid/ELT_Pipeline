@@ -23,7 +23,7 @@ This will start the image, check in docker whether the image is running or not.
 ### Staging Tables ###
 <img width="963" alt="image" src="https://user-images.githubusercontent.com/31180223/175987093-e16b073e-0133-4bb5-86aa-459af7d24095.png">
 
-## Data in staging tables ##
+### Data in staging tables ###
 
 <img width="1189" alt="image" src="https://user-images.githubusercontent.com/31180223/175987225-13d57d06-26f9-4042-905e-f357703f3dc8.png">
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/31180223/175987439-a68ddb96-5c7a-44ae-b5dd-a1ea7e3598ac.png">
