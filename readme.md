@@ -1,5 +1,5 @@
 ## Steps for installing Dependenices ##
-1. Switch to virtual environment using source env/bin/activate or for initiating it for the first time enter "python -m venv env"
+1. Switch to virtual environment using **source env/bin/activate** or for initiating it for the first time enter "python -m venv env"
 2. Download the following libraries in virtual environment if needed; however, the attached env folder has setup with all dependencies so just enter "python -m venv env"
 3. Following commands have been used for downloading all the dependencies:
 - pip install requests
